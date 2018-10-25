@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简介</title>
+    <link rel="stylesheet" href="css/intro.css">
+</head>
+<body>
+    <iframe src="header.html" frameborder="0" id='header'></iframe>
+    <div class="main">
+        <div class="top">
+            <img src="imgs/intro/1.jpg" alt="">
+            <img src="imgs/intro/2.jpg" alt="">
+            <img src="imgs/intro/3.jpg" alt="">
+        </div>
+        <div class="bott">
+     <!--<img src="imgs/intro/4.jpg" alt=""  usemap="#map">
+     <map name="map">
+        <area href="#" shape="rect" coords="87,2,362,213" >
+        <area href="#" shape="rect" coords="364,4,635,213" >
+        <area href="#" shape="rect" coords="639,4,909,214" >
+        <area href="#" shape="rect" coords="89,218,360,431" >
+        <area href="#" shape="rect" coords="364,219,636,428" >
+        <area href="#" shape="rect" coords="639,219,910,430" >
+        <area href="#" shape="rect" coords="642,657,912,867" >
+        <area href="#" shape="rect" coords="91,437,634,646" >
+        <area href="#" shape="rect" coords="366,437,910,648" >
+        <area href="#" shape="rect" coords="92,656,361,865" >
+        <area href="#" shape="rect" coords="366,657,636,867" >
+     </map>-->
+            <div><a href=''></a></div>
+            <div><a href="#"></a></div>
+            <div><a href="#"></a></div>
+            <div><a href="#"></a></div>
+            <div><a href="#"></a></div>
+            <div><a href="#"></a></div>
+            <div><a href="#"></a></div>
+            <div><a href="#"></a></div>
+            <div><a href="#"></a></div>
+            <div><a href="#"></a></div>
+            <div><a href="#"></a></div>
+            <div><a href="#"></a></div>
+
+           
+        </div>    
+    </div>
+    <iframe src="footer.html" frameborder="0" id='footer'></iframe>
+    <div class="qq">
+            <a href="#"><img src="imgs/qq.png" alt=""></a>
+    </div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+            window.onscroll=function(){
+                var scrollTop=document.documentElement.scrollTop
+                
+                var img=document.querySelector('div.qq')
+                switch(true){
+                  case scrollTop==0:img.style.bottom='-328px';
+                  break;
+                  case scrollTop>0&&scrollTop<=300:img.style.bottom='-228px';
+                  break;
+                  case scrollTop>300&&scrollTop<=600:img.style.bottom='-115px';
+                  break;
+                  case scrollTop>600&&scrollTop<=900:img.style.bottom='0';
+                  break;
+                  default:img.style.bottom='200px';
+                  
+                }
+                
+              }
+
+              $('div.bott').on('click','a', function(e){
+                    var $a=$(e.target)
+                    $a.parent().css('opacity',1)
+                               .siblings().css('opacity',0);
+              })
+    </script>
+</body>
+</html>

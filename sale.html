@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优惠</title>
+    <link rel="stylesheet" href="css/sale.css">
+</head>
+<body>
+    <iframe src="header.html" id='header' frameborder=0></iframe>
+    <div class="main">
+        <div class="img">
+            <img src="imgs/sale/1.jpg" alt="">
+            <div class="time">
+                <h1></h1>
+            </div>
+            <img src="imgs/sale/2.jpg" alt="">
+            <img src="imgs/sale/3.jpg" alt="">
+            <img src="imgs/sale/5.jpg" alt="">
+            <img src="imgs/sale/6.jpg" alt="">
+            <img src="imgs/sale/7.jpg" alt="">
+            <img src="imgs/sale/8.jpg" alt="">
+            <img src="imgs/sale/9.jpg" alt="">
+            <img src="imgs/sale/10.jpg" alt="">
+            <img src="imgs/sale/11.jpg" alt="">
+            <img src="imgs/sale/12.jpg" alt="">
+            <img src="imgs/sale/13.jpg" alt="">
+
+        </div>
+        
+    </div>
+    <div class="qq">
+            <a href="#"><img src="imgs/qq.png" alt=""></a>
+    </div>
+    <iframe src="footer.html" frameborder=0 id='footer'></iframe>
+    <script src="js/sale.js"></script>
+    <script>
+            window.onscroll=function(){
+                var scrollTop=document.documentElement.scrollTop
+                var img=document.querySelector('div.qq')
+                switch(true){
+                  case scrollTop==0:img.style.bottom='-328px';
+                  break;
+                  case scrollTop>0&&scrollTop<=300:img.style.bottom='-228px';
+                  break;
+                  case scrollTop>300&&scrollTop<=600:img.style.bottom='-115px';
+                  break;
+                  case scrollTop>600&&scrollTop<=900:img.style.bottom='0';
+                  break;
+                  default:img.style.bottom='300px';
+                  console.log(window.height)
+                }
+                
+              }
+    </script>
+</body>
+</html>
